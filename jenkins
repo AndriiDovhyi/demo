@@ -19,6 +19,11 @@ pipeline {
                 sh 'ssh root@10.0.2.8 \'uptime\''
             }
         }
+        stage("Update apt") {
+            steps {
+                sh 'ssh root@10.0.2.8 \'apt update\''
+            }
+        }
     }
 }
 
